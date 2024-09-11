@@ -5,6 +5,16 @@ Demo for Opcua Server-Client Historizing data from and to in-memory DB SQLite
 
 This project is a demonstration of an OPC UA Server-Client setup that uses SQLite as an in-memory database to store and manage historical data. It is a Node.js project that showcases how to historize data from an OPC UA server into an SQLite database and retrieve it efficiently.
 
+## Keywords
+- OPCUA
+- OPCUA Server
+- OPCUA Client
+- Node.js
+- SQLite
+- Inmemory db
+- Data Historizing from DB
+- Real-Time Data
+
 ## Setup
 
 1. **Clone the Repository:**
@@ -42,3 +52,13 @@ Client: Connects to the server and subscribes to changes of the temperature vari
 - Make sure to have Node.js and npm installed to run the project.
 - For any issues or contributions, please refer to the Contributing Guidelines or open an issue on the GitHub repository.
 - Feel free to adjust any specifics to match the exact details of your project and its configuration.
+
+## Topics
+- OPCUA
+- OPCUA Server
+- OPCUA Client
+- Node.js
+- SQLite
+- Inmemory db
+- Data Historizing from DB
+- Real-Time Data
