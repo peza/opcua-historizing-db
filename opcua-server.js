@@ -16,13 +16,13 @@ export const initializeServer = async (port, resourcePath) => {
     const addressSpace = server.engine.addressSpace;
     const namespace = addressSpace.getOwnNamespace();
 
-    const gostolFolder = namespace.addFolder(addressSpace.rootFolder.objects, {
+    const theFolder = namespace.addFolder(addressSpace.rootFolder.objects, {
         browseName: 'MyFolderName',
     });
 
     const domainRootObject = namespace.addObject({
         browseName: 'testing',
-        organizedBy: gostolFolder
+        organizedBy: theFolder
     });
 
     const temperatureNode = namespace.addVariable({
@@ -49,7 +49,7 @@ export const initializeServer = async (port, resourcePath) => {
 
     addressSpace.installHistoricalDataNode(temperatureNode, {maxOnlineValues:0})
     // Custom implementation of historyRead
-    temperatureNode.historyRead = async (context, historyReadDetails, indexRange, dataEncoding, continuationPoint) => {
+    temperatureNode.historyRead = async (context, historyReadDetails) => {
         try {
             const { startTime, endTime } = historyReadDetails;
             const filteredData = await retrieveTemperatureValuesFromDb(db, startTime, endTime);
